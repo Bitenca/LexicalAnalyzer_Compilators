@@ -1,0 +1,23 @@
+#fatorial.l2s
+#calcula o fatorial de n
+
+( int n fat i ) ( real r1 )
+
+
+( :>> "Entre n:" )
+( :<< n )
+
+( ? ( < n 0 )
+
+    (   ( :>> "Valor invalido!" ) )
+
+    ( ( = fat 1 )( = i 1 )
+        ( ...( <= i n )
+            ( = fat ( * fat i ) )
+            ( = i ( + i 1 ) )
+        )
+        
+        ( string res ) ( = res ( & "fat: " fat ) )
+        ( :>> res )
+    )
+)
